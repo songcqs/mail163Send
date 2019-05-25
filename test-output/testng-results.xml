@@ -2,44 +2,44 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="41515" started-at="2019-05-25T10:07:50Z" finished-at="2019-05-25T10:08:32Z">
+  <suite name="Suite" duration-ms="36947" started-at="2019-05-25T11:03:45Z" finished-at="2019-05-25T11:04:22Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="41515" started-at="2019-05-25T10:07:50Z" finished-at="2019-05-25T10:08:32Z">
+    <test name="Test" duration-ms="36947" started-at="2019-05-25T11:03:45Z" finished-at="2019-05-25T11:04:22Z">
       <class name="com.mail.test.FileUploadVerify">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.mail.test.FileUploadVerify@243c4f91]" name="beforeMethod" is-config="true" duration-ms="5107" started-at="2019-05-25T10:08:09Z" finished-at="2019-05-25T10:08:14Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.mail.test.FileUploadVerify@262b2c86]" name="beforeMethod" is-config="true" duration-ms="7740" started-at="2019-05-25T11:03:56Z" finished-at="2019-05-25T11:04:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="uplod()[pri:0, instance:com.mail.test.FileUploadVerify@243c4f91]" name="uplod" duration-ms="17145" started-at="2019-05-25T10:08:14Z" finished-at="2019-05-25T10:08:32Z">
+        <test-method status="PASS" signature="uplod()[pri:0, instance:com.mail.test.FileUploadVerify@262b2c86]" name="uplod" duration-ms="16203" started-at="2019-05-25T11:04:04Z" finished-at="2019-05-25T11:04:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- uplod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.mail.test.FileUploadVerify@243c4f91]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-05-25T10:08:32Z" finished-at="2019-05-25T10:08:32Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.mail.test.FileUploadVerify@262b2c86]" name="afterMethod" is-config="true" duration-ms="1175" started-at="2019-05-25T11:04:20Z" finished-at="2019-05-25T11:04:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- com.mail.test.FileUploadVerify -->
       <class name="com.mail.test.DownloadTest2">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.mail.test.DownloadTest2@7722c3c3]" name="beforeMethod" is-config="true" duration-ms="6008" started-at="2019-05-25T10:07:50Z" finished-at="2019-05-25T10:07:56Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.mail.test.DownloadTest2@12f41634]" name="beforeMethod" is-config="true" duration-ms="7209" started-at="2019-05-25T11:03:45Z" finished-at="2019-05-25T11:03:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="testOne()[pri:0, instance:com.mail.test.DownloadTest2@7722c3c3]" name="testOne" duration-ms="2257" started-at="2019-05-25T10:07:56Z" finished-at="2019-05-25T10:07:58Z">
+        <test-method status="PASS" signature="testOne()[pri:0, instance:com.mail.test.DownloadTest2@12f41634]" name="testOne" duration-ms="3082" started-at="2019-05-25T11:03:52Z" finished-at="2019-05-25T11:03:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testOne -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mail.test.DownloadTest2@7722c3c3]" name="tearDown" is-config="true" duration-ms="1140" started-at="2019-05-25T10:07:58Z" finished-at="2019-05-25T10:08:00Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mail.test.DownloadTest2@12f41634]" name="tearDown" is-config="true" duration-ms="1516" started-at="2019-05-25T11:03:55Z" finished-at="2019-05-25T11:03:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.mail.test.DownloadTest2 -->
       <class name="com.mail.test.DownloadTest">
-        <test-method status="PASS" signature="testOne()[pri:0, instance:com.mail.test.DownloadTest@2ef3eef9]" name="testOne" duration-ms="8683" started-at="2019-05-25T10:08:00Z" finished-at="2019-05-25T10:08:08Z">
+        <test-method status="PASS" signature="testOne()[pri:0, instance:com.mail.test.DownloadTest@13c27452]" name="testOne" duration-ms="12226" started-at="2019-05-25T11:03:45Z" finished-at="2019-05-25T11:03:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testOne -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mail.test.DownloadTest@2ef3eef9]" name="tearDown" is-config="true" duration-ms="1139" started-at="2019-05-25T10:08:08Z" finished-at="2019-05-25T10:08:09Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mail.test.DownloadTest@13c27452]" name="tearDown" is-config="true" duration-ms="1146" started-at="2019-05-25T11:03:57Z" finished-at="2019-05-25T11:03:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

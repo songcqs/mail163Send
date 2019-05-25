@@ -53,7 +53,7 @@ public class FileUploadVerify {
 				"C:\\Users\\Administrator\\Desktop\\PageObject.jpg" };
 		// 调用批量上传方法
 		WebAutoTest.handleUploads(By.xpath("//div[@class='by0'][1]"), "chrome", list, executeFile);
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 
 		// =====================方法三：单个文件上传=========================//
 		/*
@@ -117,7 +117,7 @@ public class FileUploadVerify {
 	@AfterMethod
 	public void afterMethod() {
 		// 关闭浏览器
-//		WebAutoTest.closeAllBrowser();
+		WebAutoTest.closeAllBrowser();
 	}
 
 }
