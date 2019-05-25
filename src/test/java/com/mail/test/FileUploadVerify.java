@@ -3,10 +3,6 @@ package com.mail.test;
 import static org.testng.Assert.assertTrue;
 
 import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,47 +49,40 @@ public class FileUploadVerify {
 
 		// =====================方法二：多个文件上传=========================//
 		// 所有需要上传的文件集合
-//		String[] list = { "C:\\Users\\Administrator\\Desktop\\pom.xml", "C:\\Users\\Administrator\\Desktop\\测试用例.xlsx",
-//				"C:\\Users\\Administrator\\Desktop\\PageObject.jpg" };
-//		// 调用批量上传方法
-//		WebAutoTest.handleUploads(By.xpath("//div[@class='by0'][1]"), "chrome", list, executeFile);
-//		Thread.sleep(1000);
+		String[] list = { "C:\\Users\\Administrator\\Desktop\\pom.xml", "C:\\Users\\Administrator\\Desktop\\测试用例.xlsx",
+				"C:\\Users\\Administrator\\Desktop\\PageObject.jpg" };
+		// 调用批量上传方法
+		WebAutoTest.handleUploads(By.xpath("//div[@class='by0'][1]"), "chrome", list, executeFile);
+		Thread.sleep(1000);
 
 		// =====================方法三：单个文件上传=========================//
-		// 指定图片的路径，这里我放桌面上
-		StringSelection sel = new StringSelection("C:\\Users\\Administrator\\Desktop\\测试用例.xlsx");
-
-		// 把图片文件路径复制到剪贴板
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sel, null);
-		System.out.println("selection" + sel);
-
-		// 点击本地上传图片
-		WebAutoTest.clickElement(By.xpath("//div[@class='by0'][1]"));
-
-		// 新建一个Robot类的对象
-		Robot robot = new Robot();
-
-		Thread.sleep(1000);
-
-		// 按下回车
-		robot.keyPress(KeyEvent.VK_ENTER);
-
-		// 释放回车
-		robot.keyRelease(KeyEvent.VK_ENTER);
-
-		// 按下 CTRL+V
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		// 释放 CTRL+V
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-		Thread.sleep(1000);
-
-		// 点击回车 Enter
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-
+		/*
+		 * // 指定图片的路径，这里我放桌面上 StringSelection sel = new
+		 * StringSelection("C:\\Users\\Administrator\\Desktop\\测试用例.xlsx");
+		 * 
+		 * // 把图片文件路径复制到剪贴板
+		 * Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sel, null);
+		 * System.out.println("selection" + sel);
+		 * 
+		 * // 点击本地上传图片 WebAutoTest.clickElement(By.xpath("//div[@class='by0'][1]"));
+		 * 
+		 * // 新建一个Robot类的对象 Robot robot = new Robot();
+		 * 
+		 * Thread.sleep(1000);
+		 * 
+		 * // 按下回车 robot.keyPress(KeyEvent.VK_ENTER);
+		 * 
+		 * // 释放回车 robot.keyRelease(KeyEvent.VK_ENTER);
+		 * 
+		 * // 按下 CTRL+V robot.keyPress(KeyEvent.VK_CONTROL);
+		 * robot.keyPress(KeyEvent.VK_V);
+		 * 
+		 * // 释放 CTRL+V robot.keyRelease(KeyEvent.VK_CONTROL);
+		 * robot.keyRelease(KeyEvent.VK_V); Thread.sleep(1000);
+		 * 
+		 * // 点击回车 Enter robot.keyPress(KeyEvent.VK_ENTER);
+		 * robot.keyRelease(KeyEvent.VK_ENTER);
+		 */
 		/**
 		 * 校验文件是否上传成功
 		 * 
