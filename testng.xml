@@ -6,6 +6,7 @@
       <class name="com.mail.test.DownloadTest2"/>
       <class name="com.mail.test.DownloadTest"/>
       <class name="com.mail.test.FileUploadVerify"/>
+      <class name="com.mail.test.RobotUpload"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
