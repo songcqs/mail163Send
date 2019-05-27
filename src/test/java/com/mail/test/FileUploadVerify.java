@@ -96,7 +96,7 @@ public class FileUploadVerify {
 			listText.add(element.getText());
 		}
 		System.out.println(listText);
-		assertTrue(listText.contains("测试用.xlsx"));
+		assertTrue(listText.contains("测试用"));
 
 		// 点击图片图标
 		WebAutoTest.clickElement(By.className("ico-editor-image"));
