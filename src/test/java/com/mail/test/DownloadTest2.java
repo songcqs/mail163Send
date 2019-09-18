@@ -14,14 +14,14 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.mail.base.WebAutoTest;
+import com.aSelenium.base.DriverBase;
 
 public class DownloadTest2 {
 	@BeforeMethod
 	public void beforeMethod() throws InterruptedException {
 		DesiredCapabilities caps = setDownloadsPath();// 更改默认下载路径
-		WebAutoTest.openBrowser("http://chromedriver.storage.googleapis.com/index.html?path=2.40/", "chrome");
-		WebAutoTest.maxBrowser();
+		DriverBase.openBrowser("http://chromedriver.storage.googleapis.com/index.html?path=2.40/", "chrome");
+		DriverBase.maxBrowser();
 	}
 
 	@Test
@@ -34,8 +34,8 @@ public class DownloadTest2 {
 			System.out.println("file.delete");
 		}
 
-		WebAutoTest.clickElement(By.linkText("chromedriver_win32.zip"));// 点击下载
-		Actions action = new Actions(WebAutoTest.getDriver());
+		DriverBase.clickElement(By.linkText("chromedriver_win32.zip"));// 点击下载
+		Actions action = new Actions(DriverBase.getDriver());
 		Thread.sleep(1000);
 		// 判断是否下载完成，没完继续等待
 		Boolean bool = null;
@@ -104,7 +104,7 @@ public class DownloadTest2 {
 
 	@AfterMethod
 	public void tearDown() {
-		WebAutoTest.closeAllBrowser();
+		DriverBase.closeAllBrowser();
 	}
 
 }

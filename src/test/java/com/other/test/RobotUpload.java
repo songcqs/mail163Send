@@ -1,4 +1,4 @@
-package com.mail.test;
+package com.other.test;
 
 import java.awt.Robot;
 import java.awt.Toolkit;

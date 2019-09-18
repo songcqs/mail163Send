@@ -1,4 +1,4 @@
-package com.mail.test;
+package com.other.test;
 
 import java.io.File;
 import java.nio.file.FileSystems;

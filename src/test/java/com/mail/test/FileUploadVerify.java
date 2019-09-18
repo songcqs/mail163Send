@@ -13,31 +13,31 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.mail.base.WebAutoTest;
+import com.aSelenium.base.DriverBase;
 
 public class FileUploadVerify {
 	@BeforeMethod
 	public void beforeMethod() throws InterruptedException {
 		// 打开浏览器，访问163邮箱登录页
-		WebAutoTest.openBrowser("https://mail.163.com/", "chrome");
+		DriverBase.openBrowser("https://mail.163.com/", "chrome");
 	}
 
 	@Test
 	public void uplod() throws InterruptedException, AWTException {
 		// 跳转frame
-		WebAutoTest.switchToFrame(By.cssSelector("iframe[id^=x-URS-iframe]"));
+		DriverBase.switchToFrame(By.cssSelector("iframe[id^=x-URS-iframe]"));
 		// 输入用户名
-		WebAutoTest.inputText(By.cssSelector("input[class*=dlemail]"), "songcqs");
+		DriverBase.inputText(By.cssSelector("input[class*=dlemail]"), "songcqs");
 		// 输入密码
-		WebAutoTest.inputText(By.cssSelector(".j-inputtext.dlpwd"), "cqs0108152535");
+		DriverBase.inputText(By.cssSelector(".j-inputtext.dlpwd"), "cqs0108152535");
 		// 点击登录
-		WebAutoTest.clickElement(By.id("dologin"));
+		DriverBase.clickElement(By.id("dologin"));
 		// 点击写信
-		WebAutoTest.clickElement(By.xpath("//span[text()='写 信']"));
+		DriverBase.clickElement(By.xpath("//span[text()='写 信']"));
 		// 输入接收方
-		WebAutoTest.inputText(By.className("nui-editableAddr-ipt"), "1357863545@qq.com");
+		DriverBase.inputText(By.className("nui-editableAddr-ipt"), "1357863545@qq.com");
 		// 输入主题
-		WebAutoTest.inputText(By.cssSelector("div[aria-label$='邮件主题']>input"), "上传测试");
+		DriverBase.inputText(By.cssSelector("div[aria-label$='邮件主题']>input"), "上传测试");
 		// AutoIT生成的辅助文件路径
 		String executeFile = "E:\\Javaworkspace\\mail163Send\\source\\uplod.exe";
 
@@ -52,7 +52,7 @@ public class FileUploadVerify {
 		String[] list = { "C:\\Users\\Administrator\\Desktop\\pom.xml", "C:\\Users\\Administrator\\Desktop\\测试用例.xlsx",
 				"C:\\Users\\Administrator\\Desktop\\PageObject.jpg" };
 		// 调用批量上传方法
-		WebAutoTest.handleUploads(By.xpath("//div[@class='by0'][1]"), "chrome", list, executeFile);
+		DriverBase.handleUploads(By.xpath("//div[@class='by0'][1]"), "chrome", list, executeFile);
 		Thread.sleep(1000);
 
 		// =====================方法三：单个文件上传=========================//
@@ -88,7 +88,7 @@ public class FileUploadVerify {
 		 * 
 		 * @@步骤：获取所有上传文件元素 - 遍历元素取得上传文件名并加入list - assert判断list中是否含有上传的文件名
 		 */
-		WebDriver webDriver = WebAutoTest.getDriver();
+		WebDriver webDriver = DriverBase.getDriver();
 		List<WebElement> webElement = webDriver.findElements(By.className("o0"));
 		List<String> listText = new ArrayList<>();
 		for (WebElement element : webElement) {
@@ -99,19 +99,19 @@ public class FileUploadVerify {
 		assertTrue(listText.contains("测试用.xlsx"));
 
 		// 点击图片图标
-		WebAutoTest.clickElement(By.className("ico-editor-image"));
+		DriverBase.clickElement(By.className("ico-editor-image"));
 		// 点击“浏览”按钮
-		WebAutoTest.clickElement(By.xpath("//span[text()='浏览']"));
+		DriverBase.clickElement(By.xpath("//span[text()='浏览']"));
 		// 调用文件上传方法上传图片(通过AutoIT实现)
-		WebAutoTest.handleUpload("chrome", "G:\\图片\\动态-搞笑\\开花瞬间-荷花.gif", executeFile);
+		DriverBase.handleUpload("chrome", "G:\\图片\\动态-搞笑\\开花瞬间-荷花.gif", executeFile);
 		// 跳转frame
-		WebAutoTest.switchToFrame(By.className("APP-editor-iframe"));
+		DriverBase.switchToFrame(By.className("APP-editor-iframe"));
 		// 输入内容
-		WebAutoTest.inputText(By.cssSelector("body[class=nui-scroll]"), "这是一个文件上传测试邮件！");
+		DriverBase.inputText(By.cssSelector("body[class=nui-scroll]"), "这是一个文件上传测试邮件！");
 		// 返回默认表单
-		WebAutoTest.switchToParentFrame();
+		DriverBase.switchToParentFrame();
 		// 点击发送
-		WebAutoTest.clickElement(By.xpath("//span[text()='发送']"));
+		DriverBase.clickElement(By.xpath("//span[text()='发送']"));
 	}
 
 	@AfterMethod

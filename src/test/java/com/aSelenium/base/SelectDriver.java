@@ -1,30 +1,40 @@
-package com.mail.base;
+package com.aSelenium.base;
 
+/**
+ * Setup1：Base内的封装
+ */
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
-public class SelectBrowser {
-	/*
-	 * // 选择浏览器类型的类 public class SelectDriver {
-	 * 
-	 * public WebDriver driverName(String browser) { // equalsIgnoreCase 将此 String
-	 * 与另一个 String 比较，不考虑大小写。 // 判断浏览器的类型是"firefox"或者"chrome"又或者是"IE" if
-	 * (browser.equalsIgnoreCase("fireFox")) {
-	 * System.setProperty("webdriver.firefox.marionette",
-	 * "D:\\java\\geckodriver\\geckodriver.exe"); return new FirefoxDriver(); } else
-	 * { System.setProperty("webdriver.chrome.driver",
-	 * "D:\\java\\chromedriver-32\\chromedriver.exe"); return new ChromeDriver(); }
-	 * 
-	 * } }
-	 */
+/**
+ * PageObject mode的
+ * 
+ * 第一步：封装driver对象
+ * 
+ * 作用：根据用户输入 选择不同的浏览器
+ */
+public class SelectDriver {
+   /*
+	*	public WebDriver driverName(String browser) {
+	*		// equalsIgnoreCase 与另一个 String 进行比较，不考虑大小写。
+	*		// 判断浏览器的类型是"firefox"或者"chrome"又或者是"IE"
+	*		if (browser.equalsIgnoreCase("fireFox")) {
+	*			System.setProperty("webdriver.firefox.marionette", "D:\\java\\geckodriver\\geckodriver.exe");
+	*			return new FirefoxDriver();
+	*		} else {
+	*			System.setProperty("webdriver.chrome.driver", "D:\\java\\chromedriver-32\\chromedriver.exe");
+	*			return new ChromeDriver();
+	*		}
+	*	}
+	*/
 
 	private static WebDriver driver = null;
 	/**
 	 * 选择浏览器类型的类
 	 */
-	public static WebDriver selectBrowser(String browser) {
+	public static WebDriver selectBrowserDriver(String browser) {
 		switch (browser) {
 		case "ie":
 			System.setProperty("webdriver.ie.driver", ".\\source\\IEDriverServer.exe");
